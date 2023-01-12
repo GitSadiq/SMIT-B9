@@ -1,0 +1,180 @@
+.body-chase{
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    border: 2px solid #aa591beb;
+    display: flex;
+    position: relative;
+}  
+.col-1{
+    display: flex;
+    flex-direction: column;
+}
+.col-2{
+    display: flex;
+    flex-direction: column-reverse
+}  
+.dark{
+    width: 100px;
+    height: 100px;
+    background-color: #aa591beb;
+}
+.light{
+    width: 100px;
+    height: 100px;
+    background-color: #cead7e;
+}
+.b1{
+    position: absolute;
+    /* left: 0px; */
+}
+.b2{
+    position: absolute;
+    left: 100px;
+}
+.b3{
+    position: absolute;
+    left: 200px;
+}
+.b4{
+    position: absolute;
+    left: 300px;
+}
+.b5{
+    position: absolute;
+    left: 400px;
+}
+.b6{
+    position: absolute;
+    left: 500px;
+}
+.b7{
+    position: absolute;
+    left: 600px;
+}
+.b8{
+    position: absolute;
+    left: 700px;
+}
+.b9{
+    position: absolute;
+    top: 100px;
+}
+.b10{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+.b11{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}
+.b12{
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
+.b13{
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+.b14{
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+.b15{
+    position: absolute;
+    left: 600px;
+    top: 100px;
+}
+.b16{
+    position: absolute;
+    left: 700px;
+    top: 100px;
+}
+
+
+
+.l1{
+    position: absolute;
+    left: 0px;
+    top: 500px
+}
+.l2{
+    position: absolute;
+    left: 100px;
+    top: 500px
+}
+.l3{
+    position: absolute;
+    left: 200px;
+    top: 500px
+}
+.l4{
+    position: absolute;
+    left: 300px;
+    top: 500px
+}
+.l5{
+    position: absolute;
+    left: 400px;
+    top: 500px
+}
+.l6{
+    position: absolute;
+    left: 500px;
+    top: 500px
+}
+.l7{
+    position: absolute;
+    left: 600px;
+    top: 500px
+}
+.l8{
+    position: absolute;
+    left: 700px;
+    top: 500px
+}
+.l9{
+    position: absolute;
+    left: 0px;
+    top: 400px;
+}
+.l10{
+    position: absolute;
+    left: 100px;
+    top: 400px;
+}
+.l11{
+    position: absolute;
+    left: 200px;
+    top: 400px;
+}
+.l12{
+    position: absolute;
+    left: 300px;
+    top: 400px;
+}
+.l13{
+    position: absolute;
+    left: 400px;
+    top: 400px;
+}
+.l14{
+    position: absolute;
+    left: 500px;
+    top: 400px;
+}
+.l15{
+    position: absolute;
+    left: 600px;
+    top: 400px;
+}
+.l16{
+    position: absolute;
+    left: 700px;
+    top: 400px;
+}
