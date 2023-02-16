@@ -123,8 +123,24 @@ document.write("Samller Number is " + small);
 
 document.write("<p>" + "<h1>" + "Question No:10" + "</h1>" + "</p>");
 
-for (var i = 1; i <= 100; i++) {
-  if (i % 5 == 0) {
-    document.write(i + ", ");
+//  for (var i = 1; i<=100; i++word.length-1) - i
+//      if ( i % 5 == 0){
+//          document.write(i+", ")
+//      }
+//  }
+
+var word = prompt("enter word");
+var flag = false;
+for (var i = 0; i < word.length; i++) {
+  if (word[i] === word[word.length - 1 - i]) {
+    flag = true;
+  } else {
+    flag = false;
+    break;
   }
+}
+if (flag) {
+  alert("you word is palindrome");
+} else {
+  alert("try again");
 }
