@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <h2>K-Electric Bill</h2>
+        <p style="display: inline;">Customer Name: </p><h4 style="display: inline;" id="cN"></h4><br>
+        <p style="display: inline;">Current Month: </p><h4 style="display: inline;" id="cM"></h4><br>
+        <p style="display: inline;">Number of Units: </p><h4 style="display: inline;" id="NoU"></h4><br>
+        <p style="display: inline;">Charges per Units: </p><h4 style="display: inline;" id="CpU"></h4> <br><br>
+        <p style="display: inline;">Net Amount Payable(Within Due Date): </p><h4 style="display: inline;" id="NaP"></h4><br>
+        <p style="display: inline;">Late Payment Surcharges: </p><h4 style="display: inline;" id="LpS"></h4><br>
+        <p style="display: inline;">Gross Amount Payable (After Due Date): </p><h4 style="display: inline;" id="GaP"></h4><br>
+        </div>
+    <script>
+        // ============Question N0:1=============
+        document.write("<h3>"+"<p>"+"Question No:01"+"</p>"+"</h3>")
+        document.write(new Date())
+
+         // ============Question N0:2=============
+        var a = new Date ()
+        var b = a.getMonth()
+        var c = ["January", "February", "March", "April", "May", 'June', 'July', "Augest", "September", 'Octuber', 'November', "December"]
+        var d = c[b]
+        alert ("Question No:2\n"+ d)
+        
+        // var e = [0,1,2,3,4,5,6,7,8,9,10,11]
+        // for (var i = 0; i<c.length; i++){  
+        //     if ( e[i] === b){
+        //     alert("Question No:2\n"+c[i])
+        //     }
+        // }
+
+         // ============Question N0:3=============
+         var a = new Date ()
+         var b = a.getDay()
+         var c = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+         var d = c[b]
+         alert("Question No:3\n"+d)
+
+        // ============Question N0:4=============
+         var a = new Date ()    
+         var b = a.getDay() 
+         if ( b === 0 || b === 6){
+            alert("Question No:4\n"+"Its a fun day")
+         }
+         else{
+            alert("Question No:4\n"+"Go to office")
+         }
+
+        // ============Question N0:5=============
+         var a = new Date ()    
+         var b = a.getDate()
+         if ( b <16){
+            alert("Question No:5\n"+"First fifteen days of the month")
+         }
+         else{
+            alert("Question No:5\n"+"last days of the month")
+         }
+
+        // ============Question N0:6=============
+        document.write("<h3>"+"<p>"+"Question No:06"+"</p>"+"</h3>")
+        document.write("Current Date:"+new Date()+"<br>")
+        document.write("Millisecond from Jan 1, 1970: "+ new Date().getTime()+"<br>")
+        document.write("Minutes from Jan 1, 1970: " +  new Date().getTime()/(1000*60*60)+"<br>").tofixed(2)
+   
+        
+        // ============Question N0:7=============
+        document.write("<h3>"+"<p>"+"Question No:07"+"</p>"+"</h3>")
+        var a = new Date().getHours()
+        if ( a < 13){
+            alert("Its AM")
+        }
+        else{
+            alert("Its PM")
+        }
+
+        // ============Question N0:8=============
+        document.write("<h3>"+"<p>"+"Question No:08"+"</p>"+"</h3>")
+        var a = new Date()
+        var b = a.setDate(31)
+        var c = a.setMonth(11)
+        var d = a.setHours(0)
+        var e = a.setMinutes(0)
+        var f = a.setSeconds(0)
+        document.write(a)
+        
+        // ============Question N0:9=============
+        document.write("<h3>"+"<p>"+"Question No:09"+"</p>"+"</h3>")
+        var ab = new Date("2 Apr, 2022")
+        var bb = ab.getTime()/(1000*60*60*24)
+        var ac = new Date()
+        var cc = ac.getTime()/(1000*60*60*24)
+        var res = Math.ceil(cc-bb)
+        document.write(res + " days passed since 1st Ramdam, 2022" )
+        
+        // ============Question N0:10=============
+        document.write("<h3>"+"<p>"+"Question No:10"+"</p>"+"</h3>")
+        var ef = new Date("01 Jan, 2022")
+        var ff = ef.getTime()/(1000*60)
+        var gh = new Date()
+        var hh = gh.getTime()/(1000*60)
+        var re = Math.ceil(hh-ff)
+        document.write(gh + "<br>" + re + " seconds pass away since beginning of 2022" )
+
+        // ============Question N0:11=============
+        document.write("<h3>"+"<p>"+"Question No:11"+"</p>"+"</h3>")
+        document.write("Current Date: " + new Date() + "<br>")
+        var date = new Date()
+        var hour = date.getHours() - 1
+        date.setHours(hour)
+        document.write("1 hour ago: " + date)
+        // console.log(date)
+        
+        // ============Question N0:12=============
+        var date = new Date()
+        var hour = date.getFullYear()-0100
+        date.setFullYear(hour)
+        alert('Question NO: 12\nCurrent Date: ' + new Date() + "\n100 year back, it was: " + date)
+
+        // ============Question N0:13=============
+        document.write("<h3>"+"<p>"+"Question No:13"+"</p>"+"</h3>")
+        var age = +prompt("Question No:13\nEnter your age")
+        var agems = age*1000*60*60*24*365
+        var date = new Date().getTime()
+        var dif = Math.ceil(date - agems)/(1000*60*60*24*365)
+        var newdate = new Date()
+        var fy = newdate.getFullYear() - age
+        // newdate.setFullYear(fy)
+        // document.write("Your age is: " + age + "<br>" + "your bith year is: "+ newdate)
+        document.write("Your age is: " + age + "<br>" + "your bith year is: "+ fy)
+        // console.log(newdate)
+
+        // ============Question N0:14=============
+        document.write("<h3>"+"<p>"+"Question No:14"+"</p>"+"</h3>")
+        
+        var CN = prompt("Enter Cutomer Name")
+        var CM = prompt("Enter current Month Name")
+        var NOU = prompt("Enter Number of Units")
+        var CPU = prompt("charges per units")
+        var NAP = NOU * CPU
+        var LPS = 350
+        var GAP = NAP + LPS
+        document.getElementById('cN').innerHTML = CN
+        document.getElementById("cM").innerHTML = CM
+        document.getElementById("NoU").innerHTML = NOU
+        document.getElementById("CpU").innerHTML = CPU
+        document.getElementById("NaP").innerHTML = NAP
+        document.getElementById("LpS").innerHTML = LPS
+        document.getElementById("GaP").innerHTML = GAP
+
+      
+
+    </script>
+
+</body>
+</html>
