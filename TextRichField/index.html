@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <label for="color">Font Color</label>
+        <input type="color" name="" id="color">
+        <label for="Bcolor">Background Color</label>
+        <input type="color" name="" id="Bcolor">
+        <label for="size">Size</label>
+        <input type="number" name="" id="size">
+        <select name="" id="">
+            <option value="bold">Bold</option>
+            <option value="bolder">Bolder</option>
+            <option value="lighter">Ligther</option>
+            <option value="normal">Normal</option>
+        </select>
+        <label for=""></label>
+
+    </div>
+    <input type="text" name="" id="inputText">
+
+    <button onclick="handleText()">Change</button>
+    <script src="./app.js"></script>
+</body>
+
+</html> -->
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich Text Editor</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h2>Rich Text Editor</h2>
+    <div class="container">
+        <div class="options">
+            <!-- Color -->
+            <div class="input-wrapper">
+                <input type="color" id="fontColor" class="styleInput" onchange="handleText()" />
+                <label for="foreColor" class="label">Font Color</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="color" id="backColor" class="styleInput" onchange="handleText()" />
+                <label for="backColor" class="label">Highlight Color</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="number" id="num" class="styleInput" onchange="handleText()" value="12" />
+                <label for="backColor" class="label">Size</label>
+            </div>
+            <div class="input-wrapper">
+                <select name="" id="weight" class="styleInput" style="width: 100px;" onchange="handleText()">
+                    <option value="bold">bold</option>
+                    <option value="bolder">bolder</option>
+                    <option value="lighter">lighter</option>
+                    <option value="normal" selected>normal</option>
+                </select>
+                <label for="backColor" class="label">Weight</label>
+            </div>
+        </div>
+        <div id="text-input" class="InputField" contenteditable="true">
+        </div>
+        <!-- <input type="text" name="" id="inputText" class="text-input"> -->
+        <!-- <button onclick="handleText()">Change</button> -->
+    </div>
+    <!--Script-->
+    <script src="./app.js"></script>
+</body>
+
+</html>
