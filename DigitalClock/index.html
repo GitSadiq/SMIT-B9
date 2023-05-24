@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(57deg, rgb(14, 113, 149), rgb(8, 34, 87));
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #main {
+            height: 580px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #stop {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 25px;
+            border-color: aliceblue;
+            background: linear-gradient(50deg, rgb(34, 129, 163), rgb(38, 78, 158));
+
+
+        }
+
+        .abc {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            color: rgb(227, 219, 219);
+            font-size: 40px;
+        }
+
+        h2 {
+            color: rgb(227, 219, 219);
+            margin-top: -35px;
+            margin-right: 10px;
+            font-size: 35px;
+        }
+
+        h3 {
+            color: rgb(227, 219, 219);
+            margin-top: -41px;
+            margin-right: 10px;
+            font-size: 40px;
+        }
+
+        h4 {
+            color: rgb(227, 219, 219);
+            margin-top: -6px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+
+        button {
+            width: 70px;
+            height: 30px;
+            background-color: rgba(34, 129, 163, 0.3);
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 2px solid whitesmoke;
+            color: azure;
+            margin-top: -10px;
+            margin-right: 5px;
+        }
+
+        button:hover {
+            width: 79px;
+            height: 35px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="stop">
+            <h1 id="Hcolor">DigitalClock</h1>
+            <h4 id="dat"></h4>
+            <div class="abc">
+                <h2 id="hours" class="head">0</h2>
+                <h3 class="head1">:</h3>
+                <h2 id="mins" class="head">0</h2>
+                <h3 class="head1">:</h3>
+                <h2 id="secs" class="head">0</h2>
+                <h2 id="am" class="head">AM</h2>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var a, b, c, d, e, hour, min, sec, dat, day;
+        a = document.getElementById('hours')
+        b = document.getElementById('mins')
+        c = document.getElementById('secs')
+        d = document.getElementById('am')
+        dat = new Date().toDateString()
+        e = document.getElementById('dat').innerHTML = dat
+        hour = new Date().getHours()
+        min = new Date().getMinutes()
+        sec = new Date().getSeconds()
+        if (hour > 12) {
+            hour = hour - 12
+            d.innerHTML = "PM"
+        }
+        else if (hour === 0) {
+            hour = 12
+            d.innerHTML = "AM"
+        }
+        a.innerHTML = hour
+        b.innerHTML = min
+        c.innerHTML = sec
+        setInterval(function () {
+            sec++
+            c.innerHTML = sec
+            if (sec >= 60) {
+                sec = 0;
+                c.innerHTML = sec
+                min++
+                b.innerHTML = min
+            }
+            else if (min >= 60) {
+                min = 0;
+                b.innerHTML = min
+                hour++
+                a.innerHTML = hour
+            }
+        }, 1000)
+
+
+
+
+        // this code look same but c.innerHTML it's a value not a Element
+        // a = document.getElementById('hours').innerHTML = new Date().getHours()
+        // b = document.getElementById('mins').innerHTML = new Date().getMinutes()
+        // c = document.getElementById('secs').innerHTML = new Date().getSeconds()
+        // setInterval(function () {
+        //         c++
+        //         c.innerHTML = c
+        //         console.log(c)
+        //     if (c >= 60) {
+        //         b++
+        //         b.innerHTML = b
+        //         console.log(b)
+        //         c = 0;
+        //     }
+        //     else if (b >= 60) {
+        //         a++
+        //         a.innerHTML = a
+        //         console.log(a)
+        //         b = 0;
+        //     }
+
+        // }, 1000)
+
+    </script>
+
+</body>
+
+</html>

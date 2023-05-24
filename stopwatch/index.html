@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(57deg, rgb(14, 113, 149), rgb(8, 34, 87));
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #main {
+            height: 580px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #stop {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 25px;
+            border-color: aliceblue;
+            background: linear-gradient(50deg, rgb(34, 129, 163), rgb(38, 78, 158));
+
+        }
+
+        .abc {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            color: rgb(227, 219, 219);
+            font-size: 35px;
+        }
+
+        h2 {
+            color: rgb(227, 219, 219);
+            margin-top: 0px;
+            margin-right: 10px;
+            font-size: 35px;
+        }
+
+        h3 {
+            color: rgb(227, 219, 219);
+            margin-top: -6px;
+            margin-right: 10px;
+            font-size: 40px;
+        }
+
+        button {
+            width: 70px;
+            height: 30px;
+            background-color: rgba(34, 129, 163, 0.3);
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0px 0px 1px 1px white;
+            border: none;
+            color: azure;
+            margin-top: -10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 1px 1px 4px 1px black;
+            border: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="stop">
+            <h1 id="Hcolor">StopWatch</h1>
+            <div class="abc">
+                <h2 id="mins" class="head">0</h2>
+                <h3 class="head1">:</h3>
+                <h2 id="secs" class="head">0</h2>
+                <h3 class="head1">:</h3>
+                <h2 id="msecs" class="head">0</h2>
+            </div>
+            <div>
+                <button id="abc" onclick="start()">Start</button>
+                <button onclick="stop()">Stop</button>
+                <button onclick="clearall()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var d;
+        var a;
+        var b;
+        var c;
+
+        function start() {
+            var min = 0
+            var sec = 0
+            var msec = 0
+            a = document.getElementById('mins')
+            b = document.getElementById('secs')
+            c = document.getElementById('msecs')
+
+
+            d = setInterval(function () {
+                msec++
+                c.innerHTML = msec
+                if (msec >= 100) {
+                    sec++
+                    b.innerHTML = sec
+                    msec = 0;
+                }
+                else if (sec >= 60) {
+                    min++
+                    a.innerHTML = min
+                    sec = 0;
+                }
+            }, 10)
+
+            document.getElementById("abc").style.display = "none"
+        }
+
+
+        function stop() {
+
+            clearInterval(d)
+            document.getElementById("abc").style.display = "inline"
+
+        }
+
+        function clearall() {
+            clearInterval(d)
+            min = 0
+            sec = 0
+            msec = 0
+            a.innerHTML = min
+            b.innerHTML = sec
+            c.innerHTML = msec
+        }
+
+    </script>
+
+</body>
+
+</html>
