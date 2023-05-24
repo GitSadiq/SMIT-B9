@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zakat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="unnamed.png">
+</head>
+
+<body>
+    <div class="form">
+        <div id="conditionalRendering">
+            <h2>Calculate your Zakat</h2>
+            <div class="inputbox">
+                <input id="money" type="number" class="money" required="">
+                <span>Money at Home (Rupee)</span>
+            </div>
+            <div class="inputbox">
+                <input id="balance" type="number" class="balance" required="">
+                <span>Bank Balance (Rupee)</span>
+            </div>
+            <div class="inputbox">
+                <input id="gold" type="number" class="gold" required="">
+                <span>Gold (Gram)</span>
+            </div>
+            <div class="inputbox">
+                <input id="silver" type="number" class="silver" required="">
+                <span>Silver (Gram)</span>
+            </div>
+            <div class="inputbox">
+                <input id="assets" type="number" class="assets" required="">
+                <span>Real Estate Assets (Rupee)</span>
+            </div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="result" id="resultContainer">
+            <h1>Your Total Zakat</h1>
+            <h1 id="result"></h1>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
